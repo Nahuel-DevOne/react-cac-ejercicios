@@ -3,7 +3,6 @@ EJERCICIO EXTRA : RECOMENDAMOS PELICULA - SERIE O LIBRO
 UTILIZAMOS SWITCH
  */
 
-
 // reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
