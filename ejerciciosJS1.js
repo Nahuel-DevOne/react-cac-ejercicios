@@ -7,19 +7,14 @@ UTILIZAMOS SWITCH
 
 // Crea una variable "string", puede contener lo que quieras:
 const nuevaString = 'Hola mundo';
-
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = 1;
-
 // Crea una variable booleana:
 const nuevoBool = true;
-
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - 5 === 5;
-
 // Resuelve el siguiente problema matemático:
 const nuevaMultiplicacion = 10 * 4 === 40 ;
-
 // Resuelve el siguiente problema matemático:
 const nuevoModulo = 21 % 5 === 1;
 
@@ -33,8 +28,10 @@ function devolverString(str) {
   return str.toString();
 }
 
+const devolverStringFlecha = str => str.toString();
+
 console.log(devolverString("Cadena de texto"));
-console.log(devolverString(4));
+console.log(devolverStringFlecha(4));
 
 /********************************************/
 console.info('Función suma:');
@@ -45,6 +42,8 @@ function suma(x=0, y=0) {
   // Tu código:
   return x + y;
 }
+
+const sumaFlecha = (x,y) => x + y;
 
 let valorSuma = suma(4,5);
 console.log(valorSuma);
@@ -92,14 +91,19 @@ function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:utilizar if y else
-  if(x === y){
-    return true;
-  } else{
-    return false;
-  }
+  // if(x === y){
+  //   return true;
+  // } else{
+  //   return false;
+  // }
+  // una mejor opción
+  return x === y;
 }
 
 console.log(sonIguales(1,1))
+
+const sonIgualesFlecha = (x,y) => x === y;
+console.log(sonIgualesFlecha(1,1))
 
 /********************************************/
 console.info('Función tienenMismaLongitud:');
@@ -107,11 +111,13 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(str1.length === str2.length){
-    return true;
-  } else{
-    return false;
-  }
+  // if(str1.length === str2.length){
+  //   return true;
+  // } else{
+  //   return false;
+  // }
+  // una mejor opción
+  return str1.length === str2.length
 }
 
 console.log(tienenMismaLongitud('hola', 'sapo'))
@@ -122,11 +128,13 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num < 90) {
-    return true;
-  } else {
-    return false;
-  }
+  // if (num < 90) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+
+  return num < 90;
 }
 
 console.log(menosQueNoventa(89));
@@ -137,11 +145,13 @@ function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num > 50){
-    return true;
-  } else {
-    return false;
-  }
+  // if (num > 50){
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+
+  return num > 50;
 }
 
 console.log(mayorQueCincuenta(51));
@@ -162,13 +172,15 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  let esPar = num % 2 === 0 ;
+  // let esPar = num % 2 === 0 ;
 
-  if (esPar) {
-    return true;
-  } else {
-    return false;
-  }
+  // if (esPar) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+
+  return num % 2 === 0;
 }
 
 console.log(esPar(1000));
@@ -179,13 +191,17 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  let esImpar = num % 2 === 1;
+  // let esImpar = num % 2 === 1;
 
-  if (esImpar) {
-    return true;
-  } else {
-    return false;
-  }
+  // if (esImpar) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+
+  // Dos maneras de hacerlo
+  // return num % 2 !== 0;
+  return num % 2 === 1;
 }
 
 console.log(esImpar(13437));
@@ -265,9 +281,14 @@ function esPositivo(numero) {
   } else {
     return false
   }
+  // lo mismo con un ternario
 }
 
 console.log(esPositivo(0));
+
+// const esPositivoFlecha = num => {
+//   num > 0 ? 'Es positivo' ? num < 0 'Es negativo' : false 
+// }
 
 /********************************************/
 console.info('Función agregarSimboloExclamacion:');
@@ -356,15 +377,12 @@ function esVocal(letra){
   if ( letraMinuscula == 'a' || letraMinuscula == 'e' || letraMinuscula == 'i' || letraMinuscula == 'o' || letraMinuscula == 'u' ) {
     console.log('Es vocal');
     document.write('Es vocal');
-    // alert('Es vocal');
   } else if (letra.length > 1) {
     console.log('Dato incorrecto');
     document.write('Dato incorrecto');
-    // alert('Dato incorrecto');
   } else {
     console.log('dato incorrecto');
     document.write('dato incorrecto');
-    // alert('Dato incorrecto');
   }
 }
 
