@@ -42,11 +42,12 @@ function suma(x=0, y=0) {
   // Tu código:
   return x + y;
 }
-
-const sumaFlecha = (x,y) => x + y;
-
 let valorSuma = suma(4,5);
 console.log(valorSuma);
+
+const sumaFlecha = (x=0, y=0) => x + y;
+let valorSumaFlecha = sumaFlecha(10, 15);
+console.log(valorSumaFlecha);
 
 /********************************************/
 console.info('Función resta:');
@@ -56,9 +57,12 @@ function resta(x=0, y=0) {
   // Tu código:
   return y - x;
 }
-
 let valorResta = resta(5,4)
 console.log(valorResta)
+
+const restaFlecha = (x=0, y=0) => y - x;
+let valorRestaFlecha = restaFlecha(5,4)
+console.log(valorRestaFlecha)
 
 /********************************************/
 console.info('Función multiplica:');
@@ -68,9 +72,12 @@ function multiplica(x=1, y=1) {
   // Tu código:
   return x * y;
 }
-
 let valorMultiplicar = multiplica(4,5);
 console.log(valorMultiplicar);
+
+const multiplicaFlecha = (x,y) => x * y;
+let valorMultiplicarFlecha = multiplicaFlecha(4,5);
+console.log(valorMultiplicarFlecha);
 
 /********************************************/
 console.info('Función divide:');
@@ -81,9 +88,13 @@ function divide(x=1, y=1) {
   if (y === 0) return new Error('No se puede dividir por cero')
   return x / y;
 }
-
 let valorDivision = divide(39,3);
 console.log(valorDivision);
+
+const divideFlecha = (x,y) => x / y;
+let valorDivisionFlecha = divideFlecha(39,3);
+console.log(valorDivisionFlecha);
+
 
 /********************************************/
 console.info('Función sonIguales:');
@@ -120,7 +131,10 @@ function tienenMismaLongitud(str1, str2) {
   return str1.length === str2.length
 }
 
-console.log(tienenMismaLongitud('hola', 'sapo'))
+console.log(tienenMismaLongitud('hola', 'sapo'));
+
+const tienenMismaLongitudFlecha = (str1, str2) => str1.length === str2.length;
+console.log(tienenMismaLongitudFlecha('hola', 'sapo'));
 
 /********************************************/
 console.info('Función menosQueNoventa:');
@@ -139,6 +153,8 @@ function menosQueNoventa(num) {
 
 console.log(menosQueNoventa(89));
 
+const menosQueNoventaFlecha = num => num < 90;
+
 /********************************************/
 console.info('Función mayorQueCincuenta:');
 function mayorQueCincuenta(num) {
@@ -155,6 +171,9 @@ function mayorQueCincuenta(num) {
 }
 
 console.log(mayorQueCincuenta(51));
+
+const mayorQueCincuentaFlecha = num => num > 50;
+console.log(mayorQueCincuentaFlecha(51));
 
 /********************************************/
 console.info('Función obtenerResto:');
