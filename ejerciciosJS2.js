@@ -77,7 +77,13 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuelve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
-
+  const colores = {
+    Blue: 'blue',
+    Red: 'red',
+    Green: 'green',
+    Orange: 'orange',
+    Default: 'Color not found'
+  }
 
 }
 
@@ -85,8 +91,12 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-
+  return console.log(numero === 10 || numero === 5)
 }
+
+esDiezOCinco(3)
+esDiezOCinco(10)
+esDiezOCinco(5)
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
