@@ -16,12 +16,14 @@ function obtenerMayor(x, y) {
 
 console.log(obtenerMayor(9,5))
 
-function mayoriaDeEdad(edad) {
-  //Determinar si la persona según su edad puede ingresar a un evento.
-  //Si tiene 18 años ó más, devolver --> "Allowed"
-  //Si es menor, devolver --> "Not allowed"
-  edad >= 18 ? console.log('Allowed') : console.log('Not allowed');
-}
+// function mayoriaDeEdad(edad) {
+//   //Determinar si la persona según su edad puede ingresar a un evento.
+//   //Si tiene 18 años ó más, devolver --> "Allowed"
+//   //Si es menor, devolver --> "Not allowed"
+//   edad >= 18 ? console.log('Allowed') : console.log('Not allowed');
+// }
+
+const mayoriaDeEdad = edad => edad >= 18 ? console.log('Allowed') : console.log('Not allowed');
 
 mayoriaDeEdad(18)
 mayoriaDeEdad(17)
@@ -87,38 +89,47 @@ function colors(color) {
 
 }
 
-function esDiezOCinco(numero) {
-  // Devuelve "true" si "numero" es 10 o 5
-  // De lo contrario, devuelve "false"
-  // Tu código:
-  return console.log(numero === 10 || numero === 5)
-}
+// function esDiezOCinco(numero) {
+//   // Devuelve "true" si "numero" es 10 o 5
+//   // De lo contrario, devuelve "false"
+//   // Tu código:
+//   return console.log(numero === 10 || numero === 5)
+// }
+
+const esDiezOCinco = numero => console.log(numero === 10 || numero === 5);
 
 esDiezOCinco(3)
 esDiezOCinco(10)
 esDiezOCinco(5)
 
-function estaEnRango(numero) {
-  // Devuelve "true" si "numero" es menor que 50 y mayor que 20
-  // De lo contrario, devuelve "false"
-  // Tu código:
-  return console.log(numero < 50 && numero > 20);
-}
+// function estaEnRango(numero) {
+//   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
+//   // De lo contrario, devuelve "false"
+//   // Tu código:
+//   return console.log(numero < 50 && numero > 20);
+// }
+
+const estaEnRango = numero => console.log(numero < 50 && numero > 20);
 
 estaEnRango(30);
 estaEnRango(50);
 estaEnRango(20);
 
-function esEntero(numero) {
-  // Devuelve "true" si "numero" es un entero (int/integer)
-  // Ejemplo: 0.8 -> false
-  // Ejemplo: 1 -> true
-  // Ejemplo: -10 -> true
-  // De lo contrario, devuelve "false"
-  // Pista: Puedes resolver esto usando `Math.floor`
-  // Tu código:
-  let entero = Math.floor(numero);
+// function esEntero(numero) {
+//   // Devuelve "true" si "numero" es un entero (int/integer)
+//   // Ejemplo: 0.8 -> false
+//   // Ejemplo: 1 -> true
+//   // Ejemplo: -10 -> true
+//   // De lo contrario, devuelve "false"
+//   // Pista: Puedes resolver esto usando `Math.floor`
+//   // Tu código:
+//   let entero = Math.floor(numero);
   
+//   return console.log(entero === numero);
+// }
+
+const esEntero = numero => {
+  let entero = Math.floor(numero);
   return console.log(entero === numero);
 }
 
