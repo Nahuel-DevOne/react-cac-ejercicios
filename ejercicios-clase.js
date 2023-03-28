@@ -13,18 +13,15 @@
 // //     document.write(numero);
 // // } while(numero < 100)
 
-
 // // for(let i = 0; i < 100 ; i++){
 // //     numero++;
 // //     console.log(numero)
 // // }
 
-
 // // for(let i = 0; i > 0; i++){
 // //     numero++;
 // //     console.log(numero);
 // // }
-
 
 // // Arrays
 
@@ -75,31 +72,31 @@
 // const arraySlice = animales.slice(0,3);
 // console.log(arraySlice)
 
-
-const getNamefetch = (idPost) => {
-    try {
-        fetch(`https://jsonplaceholder.typicode.com/posts/${idPost}`)
-    .then((res) => {
-      /*  console.log(res) */
-      return res.json();
-    })
-    .then((post) => {
-      fetch(`https://jsonplaceholder.typicode.com/users/${post.userId}`)
-        .then((res) => {
-          /*  console.log(res) */
-          return res.json();
-        })
-        .then((user) => {
-          console.log(
-            `${user.name} escribio el post ${idPost} y vive en ${user.address.city}`
-          );
-        });
-    });  
-    } catch (error) {
-        console.log(error);
-    }
+/** Fetch */
+/*********************************************************************/
+const getNamefetch = idPost => {
+  try {
+    fetch(`https://jsonplaceholder.typicode.com/posts/${idPost}`)
+      .then(res => {
+        /*  console.log(res) */
+        return res.json();
+      })
+      .then(post => {
+        fetch(`https://jsonplaceholder.typicode.com/users/${post.userId}`)
+          .then(res => {
+            /*  console.log(res) */
+            return res.json();
+          })
+          .then(user => {
+            console.log(
+              `${user.name} escribio el post ${idPost} y vive en ${user.address.city}`
+            );
+          });
+      });
+  } catch (error) {
+    console.log(error);
+  }
 };
 getNamefetch(48);
 
-
-
+/*********************************************************************/
