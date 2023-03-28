@@ -176,14 +176,16 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-
+  
 }
+
+// esPrimo(17);
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-
+  return valor ? 'Soy verdadero' : 'Soy falso';
 }
 
 function tablaDelSeis(){
@@ -203,7 +205,12 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-
+  let i = 1;
+  do {
+    numero += 5;
+    i++;
+  } while (i <= 8);
+  return numero;
 }
 
 
